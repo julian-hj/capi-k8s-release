@@ -3,7 +3,7 @@
 replicaCount: 1
 
 images:
-  ccng: cloudfoundry/cloud-controller-ng
+  ccng: cloudfoundry/capi:local-worker
   nginx: cloudfoundry/capi:nginx
 namespace: cf-system
 

@@ -48,7 +48,7 @@ nginx:
   instance_socket: "/data/cloud_controller_ng/cloud_controller.sock"
 
 index: 0
-name: TODO
+name: ""
 route_services_enabled: true
 volume_services_enabled: false
 

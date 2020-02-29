@@ -69,6 +69,7 @@ spec:
             mountPath: /cloud_controller_ng
           - name: nginx-uploads
             mountPath: /tmp/uploads
+      serviceAccountName: cc-api-service-account
       volumes:
       - name: server-sock
         emptyDir: {}

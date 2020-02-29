@@ -3,7 +3,7 @@
 replicaCount: 1
 
 images:
-  ccng: cloudfoundry/capi:local-worker
+  ccng: cloudfoundry/capi:sa-token
   nginx: cloudfoundry/capi:nginx
 namespace: cf-system
 
@@ -103,3 +103,13 @@ apiServer:
 
 kbld:
   destination:
+
+kubernetes:
+  api:
+    url: ""
+kpack:
+  registry:
+    hostname: ""
+    repository: ""
+    username: ""
+    password: ""

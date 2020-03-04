@@ -21,6 +21,11 @@ ccdb:
   database: cloud_controller
 
 blobstore:
+  region: "''"
+  package_directory_key: cc-packages
+  droplet_directory_key: cc-droplets
+  resource_directory_key: cc-resources
+  buildpack_directory_key: cc-buildpacks
   endpoint: http://capi-blobstore-minio.default:9000
   access_key_id: AKIAIOSFODNN7EXAMPLE
   secret_access_key: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY

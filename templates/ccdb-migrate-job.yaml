@@ -1,0 +1,17 @@
+#@ load("@ytt:data", "data")
+---
+apiVersion: apps/v1
+kind: Job
+metadata:
+  name: ccdb-migrate
+  namespace: #@ data.values.system_namespace
+template:
+	spec:
+	  containers:
+	    - name: run-migrations
+	          image: #@ data.values.images.ccng
+	          imagePullPolicy: Always
+	          command: ['bundle', 'exec', 'rake', 'db:setup_database']
+	          volumeMounts:
+	          - name: cloud-controller-ng-yaml
+	            mountPath: /config	
